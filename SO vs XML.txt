@@ -1,0 +1,33 @@
+////// SCRIPTABLE OBJECTS
+
+- Intérêts :
+	- Centralisation des données.
+	- Abstraction des entités qui tirent, qui utilisent une class générique "ShootController".
+	- Possibilité de backuper, envoyer rapidement les assets.
+	- Modification au runtime sauvegardée.
+- Inconvénients :
+	- Devoir créer un asset à chaque fois.
+	- Beaucoup de données sans doute affichées pour rien (par exemple afficher un angle de duckpaw random alors qu'on n'en veut pas, mais on ne va pas se faire chier à créer un "RandomDuckpawShootDatas", pas idéal pour les GD.
+	- Si on grimpe en nombre d'assets, ça devient vite bordélique à manipuler malgré tout.
+	- Sérialisation made in unity -> caca (refactoring, renaming, git, etc.).
+	- Pas de réutilisation, c'est fermé à Unity.
+	
+	
+	
+	
+////// XML
+
+- Intérêts :
+	- Centralisation des données.
+	- Abstraction des entités qui tirent, qui utilisent une class générique "ShootController".
+	- Possibilité de backuper, envoyer rapidement les assets.
+	- Réutilisable car il s'agit d'un bête fichier texte lisible partout, pas que dans Unity.
+	- Pas de sérialisation Unity donc aucun bug à craindre avec ça, refactoring easy.
+	- Un seul fichier texte peut contenir énormément de datas.
+	- Possibilité de génération automatisée (via un excel de stats ou autre).
+	- Modding possible.
+	- Ecriture de fichiers de sauvegardes utilisables efficacement.
+- Inconvénients :
+	- Plus long à mettre en place (besoin de désérialiser les datas).
+	- Pas de références à des assets Unity, on doit donc passer par des méthodes autres (dossier Resources, singletons de databases, etc.).
+	- Pas de sauvegarde au runtime (mais osef car les xml sont là pour stocker beaucoup de datas, donc pas une quantité qu'on veut éditer au runtime).

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+   <xs:element name="WeaponDefinitions">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="WeaponDefinition" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="Rate" type="xs:float" minOccurs="1" maxOccurs="1"/>
+                     <xs:element name="ReloadDuration" type="xs:float" minOccurs="1" maxOccurs="1"/>
+                     <xs:element name="MagazineCapacity" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
+                     <xs:element name="Behaviour" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="Laser" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="LaserPrefabId" type="xs:token" minOccurs="1" maxOccurs="1"/>
+                                       <xs:element name="Duration" type="xs:float" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Gun" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="BulletPrefabId" type="xs:token" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Shotgun" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="BulletPrefabId" type="xs:token" minOccurs="1" maxOccurs="1"/>
+                                       <xs:element name="Angle" type="xs:float" minOccurs="1" maxOccurs="1"/>
+                                       <xs:element name="Count" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Id" type="xs:token" use="required"/>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   
+</xs:schema>

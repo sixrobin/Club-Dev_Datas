@@ -1,0 +1,63 @@
+﻿<WeaponDefinitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="WeaponDefinitions.xsd">
+
+   <WeaponDefinition Id="BasicGun">
+      <Rate>0.2</Rate>
+      <ReloadDuration>1</ReloadDuration>
+      <MagazineCapacity>10</MagazineCapacity>
+      <Behaviour>
+         <Gun>
+            <BulletPrefabId>Bullet</BulletPrefabId>
+         </Gun>
+      </Behaviour>
+   </WeaponDefinition>
+
+   <WeaponDefinition Id="Uzi">
+      <Rate>0.1</Rate>
+      <ReloadDuration>0.5</ReloadDuration>
+      <MagazineCapacity>500</MagazineCapacity>
+      <Behaviour>
+         <Gun>
+            <BulletPrefabId>UziBullet</BulletPrefabId>
+         </Gun>
+      </Behaviour>
+   </WeaponDefinition>
+
+   <WeaponDefinition Id="BasicShotgun">
+      <Rate>0.3</Rate>
+      <ReloadDuration>0.5</ReloadDuration>
+      <MagazineCapacity>5</MagazineCapacity>
+      <Behaviour>
+         <Shotgun>
+            <BulletPrefabId>Bullet</BulletPrefabId>
+            <Angle>25</Angle>
+            <Count>4</Count>
+         </Shotgun>
+      </Behaviour>
+   </WeaponDefinition>
+
+   <WeaponDefinition Id="EpicShotgun">
+      <Rate>0.1</Rate>
+      <ReloadDuration>0.5</ReloadDuration>
+      <MagazineCapacity>10</MagazineCapacity>
+      <Behaviour>
+         <Shotgun>
+            <BulletPrefabId>Bullet</BulletPrefabId>
+            <Angle>30</Angle>
+            <Count>6</Count>
+         </Shotgun>
+      </Behaviour>
+   </WeaponDefinition>
+
+   <WeaponDefinition Id="Laser">
+      <Rate>0.5</Rate>
+      <ReloadDuration>1</ReloadDuration>
+      <Behaviour>
+         <Laser>
+            <LaserPrefabId>Laser</LaserPrefabId>
+            <Duration>2</Duration>
+         </Laser>
+      </Behaviour>
+   </WeaponDefinition>
+   
+</WeaponDefinitions>
